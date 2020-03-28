@@ -18,6 +18,7 @@ import xml.etree.ElementTree as ET
 import math
 import copy
 import sys
+from pprint import pprint
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
@@ -198,7 +199,7 @@ class Tablets:
                                         'orient': side}
                         except Exception as e:
                             pass
-
+        pprint(self.device_data)
         for device, data in self.device_data.items():
             # get button svg info
             if 'pad' in data.keys():
