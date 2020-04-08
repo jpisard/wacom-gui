@@ -85,6 +85,8 @@ class Tablets:
                 devID = self.device_data[dev_type]['devID']
                 if self.device_data[dev_type]['devID'] not in self.tablets.keys():
                     self.tablets[devID] = []
+                print("\nFound Device: %s" % device)
+                pprint(inputs)
                 # assume if it's the same device it has the same inputs for all connected
                 dev_count = detected[device]['pad']['id'].__len__()
                 for x in range(0, dev_count):
